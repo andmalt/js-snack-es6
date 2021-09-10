@@ -5,11 +5,24 @@ Usiamo i nuovi metodi degli array forEach() o filter(). */
 
 const stringNumbers = ['uno','due','tre','quattro','cinque'];
 
-let  newStringNumbers = stringNumbers.filter((Element,index) => {
-    if(index > 0 && index < 4){
-        return true
-    };
-    return false;
-});
+// creo una funzione con tre elementi
+function newArray(array, a , b){
 
-console.log(newStringNumbers);
+    // creo una variabile per salvare l'array filtrato (prendendo come parametro l'indice)
+    let  newStringNumbers = array.filter((Element,index) => {
+
+        // l'indice è maggiore di a e minore di b
+        if(index > a && index < b){
+            return true;
+        };
+        return false;
+    });
+    return newStringNumbers;
+}
+
+
+
+let newStringArray = newArray(stringNumbers,0,4);
+
+console.log(newStringArray);
+
