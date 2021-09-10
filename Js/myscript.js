@@ -11,8 +11,8 @@ function newArray(array, a , b){
     // creo una variabile per salvare l'array filtrato (prendendo come parametro l'indice)
     let  newStringNumbers = array.filter((Element,index) => {
 
-        // l'indice è maggiore di a e minore di b
-        if(index > a && index < b){
+        // l'indice è maggiore uguale di a e minore uguale di b
+        if(index >= a && index <= b){
             return true;
         };
         return false;
@@ -21,8 +21,8 @@ function newArray(array, a , b){
 }
 
 
-
-let newStringArray = newArray(stringNumbers,0,4);
+// utilizzo la funzione sulla stringa
+let newStringArray = newArray(stringNumbers,1,3);
 
 console.log(newStringArray);
 
